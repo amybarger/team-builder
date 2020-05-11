@@ -14,10 +14,19 @@ const Form = props => {
         />
         <label htmlFor="email">email</label> 
             <input
-            id="email"
-            type="text"
-            name="email"
-            placeholder="Please enter your email" />
+                id="email"
+                type="text"
+                name="email"
+                placeholder="Please enter your email" 
+            />
+
+        <label htmlFor="role">role</label>
+            <input 
+                id="role"
+                type="text"
+                name="role"
+                placeholder="Please enter your role"    
+            />
             
         />
         </form>
