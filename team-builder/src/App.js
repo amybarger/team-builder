@@ -19,7 +19,7 @@ function App() {
       id: members.length + 1,
       name: member.name,
       email: member.email,
-      role: member,
+      role: member.role
     };
 
     setMembers([...members, newMember])

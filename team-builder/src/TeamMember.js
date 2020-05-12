@@ -11,11 +11,12 @@ const teamStyle = {
 };
 
 const TeamMember = props => {
+  console.log("team props", props);
   
   return (
     <div className="team-members">
       {props.members.map( member => (
-        <div className="member" key={member.id} div style={teamStyle}>
+        <div className="member" key={member.id} style={teamStyle}>
           <h2>{member.name}</h2>
           <p>{member.email}</p>
           <p>{member.role}</p>
