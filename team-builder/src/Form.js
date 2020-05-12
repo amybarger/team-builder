@@ -3,8 +3,9 @@ import React, { useState } from "react";
 const Form = props => {
 
     const [member, setMember] = useState({
-        title: "",
-        body: ""
+        name: "",
+        email: "",
+        role: ""
     });
 
     const handleChanges = event => {
@@ -15,37 +16,39 @@ const Form = props => {
 
     const submitForm = event => {
         event.preventDefault();
-        props.addNewMember(member);
-        setMember({ title: "", body: ""});
+        props.addMember(member);
+        setMember({ name: "", email: "", role: ""});
     };
 
     return (
         <form onSubmit={submitForm}>
-        <label htmlFor="employee">Employee Card</label>
+        <label htmlFor="name">Name</label>
             <input 
                 onChange={handleChanges}
-                id="employee"
+                id="name"
                 type="text"
-                name="employee"
+                name="name"
                 placeholder="Please enter your name"
-                value={member.title}
+                value={member.name}
             />
         <label htmlFor="email">Email</label> 
             <input
-            onChange={handleChanges}
+                onChange={handleChanges}
                 id="email"
                 type="text"
                 name="email"
                 placeholder="Please enter your email" 
-                value={member.body}
+                value={member.email}
             />
 
         <label htmlFor="role">Role</label>
             <input 
+                onChange={handleChanges}
                 id="role"
                 type="text"
                 name="role"
-                placeholder="Please enter your role"    
+                placeholder="Please enter your role"
+                value={member.role}    
             />
             
         <button type="submit">Submit</button>
